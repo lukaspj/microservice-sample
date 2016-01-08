@@ -13,7 +13,7 @@ ratpack {
         get {
             render groovyMarkupTemplate("index.gtpl", title: "My Ratpack App")
         }
-        prefix("test") {
+        get("test") {
             all chain(registry.get(TestRestEndpoint))
         }
 
